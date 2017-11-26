@@ -9,11 +9,11 @@ $('#photo').change(function(){
 function createNewPost(){
 
     var newpost = {
-        username:'pkorawit',
+        username:$('#username').val(),
         title:$('#title').val(),
         comment:$('#comment').val(),
         image_url:$('#photo').val(),
-        create_date:new Date()
+        create_date: moment()
     };
 
     console.log(newpost);
@@ -22,6 +22,7 @@ function createNewPost(){
     axios.post(url, newpost)
       .then(function (response) {
         console.log(response);
+        window.location.href = 'index.html';
       })
       .catch(function (error) {
         console.log(error);

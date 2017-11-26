@@ -1,6 +1,6 @@
 // call the packages we need
-var express    = require('express');        // call express
-var app        = express();   
+var express = require('express');        // call express
+var app = express();   
 var cors = require('cors');              // define our app using express
 var bodyParser = require('body-parser');
 var posts = require('./post.js');

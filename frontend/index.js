@@ -10,7 +10,7 @@ $('#search').click(function(){
 function loadAllPost() {
     $('#posts').empty();
     //Get all posts
-    var url = 'http://localhost:8080/api/posts/';
+    var url = '/api/posts/';
     axios.get(url)
         .then(function (response) {
             console.log(response);
@@ -31,7 +31,7 @@ function loadAllPost() {
 function loadPostByUser() {
         $('#posts').empty();
         //Get all posts
-        var url = 'http://localhost:8080/api/posts/pkorawit';
+        var url = '/api/posts/pkorawit';
         axios.get(url)
             .then(function (response) {
                 console.log(response);
